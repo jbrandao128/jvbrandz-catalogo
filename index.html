@@ -34,7 +34,7 @@ dialog{width:min(740px,calc(100% - 28px));max-height:90vh;overflow:auto;backgrou
 @media(min-width:1100px){.grid{grid-template-columns:repeat(4,1fr)}.product-visual{height:230px;padding:44px 18px 18px}.product-info{padding:17px}.product-info h3{font-size:17px}}
 @media(max-width:520px){.catalog-toolbar{align-items:flex-start;flex-direction:column;gap:4px}.filters{flex-wrap:nowrap;overflow:auto;padding-bottom:8px}.filter{white-space:nowrap;flex:none}.detail-layout{grid-template-columns:1fr;gap:18px}.detail-photo img{height:180px}.hero-art{min-height:280px}.brand-composition{width:260px;height:230px}.hero-jv-logo img{transform:scale(1.35)}.hero{padding-bottom:20px}section{padding:48px 0}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
-</style>
+.delivery-note{border:1px solid #55492d;border-radius:10px;padding:15px 18px;color:#eac672;font-size:14px;line-height:1.6;margin:0 0 24px}#productConfiguration{width:100%;padding:12px;background:#252525;color:white;border:1px solid #555;border-radius:8px;font:inherit;font-size:14px}</style>
 </head>
 <body>
 <header><div class="wrap nav">
@@ -51,6 +51,7 @@ dialog{width:min(740px,calc(100% - 28px));max-height:90vh;overflow:auto;backgrou
 </div></section>
 <section id="catalogo"><div class="wrap">
 <div class="section-head"><div><div class="eyebrow">Seleção JvBrandz</div><h2>Encontre o que procura.</h2></div><p>Disponibilidade e valores sob consulta.</p></div>
+<p class="delivery-note">Entrega em média em 7 dias. O prazo é confirmado no atendimento, conforme o produto e o destino.</p>
 <div class="tools"><input id="search" class="search" type="search" placeholder="Busque por produto, modelo ou marca" aria-label="Buscar produto"><div class="filters" id="filters">
 </div></div>
 <div class="catalog-toolbar"><p id="resultCount" role="status" aria-live="polite">Carregando catálogo…</p><label for="sort">Ordenar por <select id="sort"><option value="default">Categorias</option><option value="az">Nome: A a Z</option><option value="za">Nome: Z a A</option></select></label></div>
@@ -80,7 +81,7 @@ dialog{width:min(740px,calc(100% - 28px));max-height:90vh;overflow:auto;backgrou
 <label for="iphoneStorage">Armazenamento</label><select id="iphoneStorage"></select>
 <p id="selectedPrice"></p><p>Consulte a disponibilidade da configuração escolhida.</p>
 </div></div>
-<label for="iphoneSummary">Sua mensagem para o atendimento</label>
+<p class="stock-note">Entrega em média em 7 dias. O prazo é confirmado no atendimento, conforme o produto e o destino.</p><label for="iphoneSummary">Sua mensagem para o atendimento</label>
 <textarea id="iphoneSummary" readonly rows="3"></textarea>
 <div class="hero-actions"><button id="copyIphone" class="btn">Copiar pedido</button><a class="btn secondary" href="https://www.instagram.com/jvbrandz/" target="_blank" rel="noopener noreferrer">Abrir Instagram ↗</a></div>
 <p id="copyStatus" role="status" aria-live="polite"> </p>
@@ -88,9 +89,9 @@ dialog{width:min(740px,calc(100% - 28px));max-height:90vh;overflow:auto;backgrou
 
 <dialog id="productDialog" aria-labelledby="productTitle">
 <button class="close-dialog" id="closeProduct" aria-label="Fechar detalhes">×</button>
-<div class="detail-layout"><div class="detail-photo"><img id="productPreview" alt=""></div><div><span id="productCategory" class="eyebrow"></span><h2 id="productTitle"></h2><p id="productDescription"></p><p class="stock-note">Preço e disponibilidade sob consulta.</p><label for="productQuantity">Quantidade desejada</label><input id="productQuantity" type="number" min="1" max="99" value="1" inputmode="numeric"></div></div>
-<label for="productSummary">Sua mensagem para o atendimento</label><textarea id="productSummary" readonly rows="3"></textarea>
+<div class="detail-layout"><div class="detail-photo"><img id="productPreview" alt=""></div><div><span id="productCategory" class="eyebrow"></span><h2 id="productTitle"></h2><p id="productDescription"></p><p class="stock-note">Preço e disponibilidade sob consulta.</p><label for="productConfiguration">Configuração ou preferência (opcional)</label><input id="productConfiguration" type="text" maxlength="240" placeholder="Ex.: cor ou versão desejada"><label for="productQuantity">Quantidade desejada</label><input id="productQuantity" type="number" min="1" max="99" value="1" inputmode="numeric"></div></div>
+<p class="stock-note">Entrega em média em 7 dias. O prazo é confirmado no atendimento, conforme o produto e o destino.</p><label for="productSummary">Sua mensagem para o atendimento</label><textarea id="productSummary" readonly rows="3"></textarea>
 <div class="hero-actions"><button id="copyProduct" class="btn">Copiar consulta</button><a class="btn secondary" href="https://www.instagram.com/jvbrandz/" target="_blank" rel="noopener noreferrer">Abrir Instagram ↗</a></div><p id="productStatus" role="status" aria-live="polite"></p>
 </dialog>
-<script src="script.js?v=20261112"></script>
+<script src="script.js?v=20261112b"></script>
 </body></html>
