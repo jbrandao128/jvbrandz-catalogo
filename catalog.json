@@ -1,1 +1,735 @@
-{"data": {"models": [{"name": "iPhone 12", "generation": 12, "colors": ["Preto", "Branco", "Vermelho", "Verde", "Azul", "Roxo"], "storage": ["64 GB", "128 GB", "256 GB"], "image": "iphone-12.png", "source": "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111876_sp830-iphone12-ios14-2x.png", "id": "models-0", "available": true, "price": "Consultar"}, {"name": "iPhone 12 Pro", "generation": 12, "colors": ["Prateado", "Grafite", "Dourado", "Azul-Pacífico"], "storage": ["128 GB", "256 GB", "512 GB"], "image": "iphone-12-pro.png", "source": "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111875_iphone12pro-ios14.png", "id": "models-1", "available": true, "price": "Consultar"}, {"name": "iPhone 12 mini", "generation": 12, "colors": ["Preto", "Branco", "Vermelho", "Verde", "Azul", "Roxo"], "storage": ["64 GB", "128 GB", "256 GB"], "image": "iphone-12-mini.png", "source": "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111877_sp829-iphone12mini--ios14.png", "id": "models-2", "available": true, "price": "Consultar"}, {"name": "iPhone 12 Pro Max", "generation": 12, "colors": ["Prateado", "Grafite", "Dourado", "Azul-Pacífico"], "storage": ["128 GB", "256 GB", "512 GB"], "image": "iphone-12-pro-max.png", "source": "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111875_iphone12pro-ios14.png", "id": "models-3", "available": true, "price": "Consultar"}, {"name": "iPhone 13", "generation": 13, "colors": ["Vermelho", "Estelar", "Meia-noite", "Azul", "Rosa", "Verde"], "storage": ["128 GB", "256 GB", "512 GB"], "image": "iphone-13.png", "source": "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111872_iphone13-colors-480.png", "id": "models-4", "available": true, "price": "Consultar"}, {"name": "iPhone 13 Pro", "generation": 13, "colors": ["Grafite", "Dourado", "Prateado", "Azul-Sierra", "Verde-Alpino"], "storage": ["128 GB", "256 GB", "512 GB", "1 TB"], "image": "iphone-13-pro.png", "source": "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111871_iphone13-pro-colors-480.png", "id": "models-5", "available": true, "price": "Consultar"}, {"name": "iPhone 13 mini", "generation": 13, "colors": ["Vermelho", "Estelar", "Meia-noite", "Azul", "Rosa", "Verde"], "storage": ["128 GB", "256 GB", "512 GB"], "image": "iphone-13-mini.png", "source": "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111872_iphone13-mini-colors-480.png", "id": "models-6", "available": true, "price": "Consultar"}, {"name": "iPhone 13 Pro Max", "generation": 13, "colors": ["Grafite", "Dourado", "Prateado", "Azul-Sierra", "Verde-Alpino"], "storage": ["128 GB", "256 GB", "512 GB", "1 TB"], "image": "iphone-13-pro-max.png", "source": "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111870_iphone13-pro-max-colors-480.png", "id": "models-7", "available": true, "price": "Consultar"}, {"name": "iPhone 14", "generation": 14, "colors": ["Meia-noite", "Roxo", "Estelar", "Vermelho", "Azul", "Amarelo"], "storage": ["128 GB", "256 GB", "512 GB"], "image": "iphone-14.png", "source": "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111850_iphone-14_1.png", "id": "models-8", "available": true, "price": "Consultar"}, {"name": "iPhone 14 Pro", "generation": 14, "colors": ["Preto-espacial", "Prateado", "Dourado", "Roxo-profundo"], "storage": ["128 GB", "256 GB", "512 GB", "1 TB"], "image": "iphone-14-pro.png", "source": "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111846_sp875-sp876-iphone14-pro-promax.png", "id": "models-9", "available": true, "price": "Consultar"}, {"name": "iPhone 14 Plus", "generation": 14, "colors": ["Meia-noite", "Roxo", "Estelar", "Vermelho", "Azul", "Amarelo"], "storage": ["128 GB", "256 GB", "512 GB"], "image": "iphone-14-plus.png", "source": "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111850_iphone-14_1.png", "id": "models-10", "available": true, "price": "Consultar"}, {"name": "iPhone 14 Pro Max", "generation": 14, "colors": ["Preto-espacial", "Prateado", "Dourado", "Roxo-profundo"], "storage": ["128 GB", "256 GB", "512 GB", "1 TB"], "image": "iphone-14-pro-max.png", "source": "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111846_sp875-sp876-iphone14-pro-promax.png", "id": "models-11", "available": true, "price": "Consultar"}, {"name": "iPhone 15", "generation": 15, "colors": ["Preto", "Azul", "Verde", "Amarelo", "Rosa"], "storage": ["128 GB", "256 GB", "512 GB"], "image": "iphone-15.png", "source": "https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/iphone_15_hero.png", "id": "models-12", "available": true, "price": "Consultar"}, {"name": "iPhone 15 Pro", "generation": 15, "colors": ["Titânio preto", "Titânio branco", "Titânio azul", "Titânio natural"], "storage": ["128 GB", "256 GB", "512 GB", "1 TB"], "image": "iphone-15-pro.png", "source": "https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/iphone_15_pro.png", "id": "models-13", "available": true, "price": "Consultar"}, {"name": "iPhone 15 Plus", "generation": 15, "colors": ["Preto", "Azul", "Verde", "Amarelo", "Rosa"], "storage": ["128 GB", "256 GB", "512 GB"], "image": "iphone-15-plus.png", "source": "https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/iphone_15_plus_hero.png", "id": "models-14", "available": true, "price": "Consultar"}, {"name": "iPhone 15 Pro Max", "generation": 15, "colors": ["Titânio preto", "Titânio branco", "Titânio azul", "Titânio natural"], "storage": ["256 GB", "512 GB", "1 TB"], "image": "iphone-15-pro-max.png", "source": "https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/iphone-15-pro-max.png", "id": "models-15", "available": true, "price": "Consultar"}, {"name": "iPhone 16", "generation": 16, "colors": ["Preto", "Branco", "Rosa", "Verde-acinzentado", "Ultramarino"], "storage": ["128 GB", "256 GB", "512 GB"], "image": "iphone-16.png", "source": "https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/iphone-16.png", "id": "models-16", "available": true, "price": "Consultar"}, {"name": "iPhone 16 Pro", "generation": 16, "colors": ["Titânio preto", "Titânio branco", "Titânio natural", "Titânio-deserto"], "storage": ["128 GB", "256 GB", "512 GB", "1 TB"], "image": "iphone-16-pro.png", "source": "https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/121031-iphone-16-pro.png", "id": "models-17", "available": true, "price": "Consultar"}, {"name": "iPhone 16 Plus", "generation": 16, "colors": ["Preto", "Branco", "Rosa", "Verde-acinzentado", "Ultramarino"], "storage": ["128 GB", "256 GB", "512 GB"], "image": "iphone-16-plus.png", "source": "https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/121030-iphone-16-plus.png", "id": "models-18", "available": true, "price": "Consultar"}, {"name": "iPhone 16 Pro Max", "generation": 16, "colors": ["Titânio preto", "Titânio branco", "Titânio natural", "Titânio-deserto"], "storage": ["256 GB", "512 GB", "1 TB"], "image": "iphone-16-pro-max.png", "source": "https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/121032-iphone-16-pro-max.png", "id": "models-19", "available": true, "price": "Consultar"}, {"name": "iPhone 17", "generation": 17, "colors": ["Preto", "Branco", "Azul-névoa", "Sálvia", "Lavanda"], "storage": ["256 GB", "512 GB"], "image": "iphone-17.png", "source": "https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/iphone-17-hero.png", "id": "models-20", "available": true, "price": "Consultar"}, {"name": "iPhone 17 Pro", "generation": 17, "colors": ["Prateado", "Laranja-cósmico", "Azul-intenso"], "storage": ["256 GB", "512 GB", "1 TB"], "image": "iphone-17-pro.png", "source": "https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/iphone-17-pro-17-pro-max-hero.png", "id": "models-21", "available": true, "price": "Consultar"}, {"name": "iPhone 17 Pro Max", "generation": 17, "colors": ["Prateado", "Laranja-cósmico", "Azul-intenso"], "storage": ["256 GB", "512 GB", "1 TB", "2 TB"], "image": "iphone-17-pro-max.png", "source": "https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/iphone-17-pro-17-pro-max-hero.png", "id": "models-22", "available": true, "price": "Consultar"}, {"name": "iPhone 18 Pro", "generation": 18, "colors": ["Preto", "Prateado", "Glacial", "Bordô"], "storage": ["256 GB", "512 GB", "1 TB", "2 TB"], "image": "iphone-18-pro.png", "source": "https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/iphone-18-pro.png", "id": "models-23", "available": true, "price": "Consultar"}, {"name": "iPhone 18 Pro Max", "generation": 18, "colors": ["Preto", "Prateado", "Glacial", "Bordô"], "storage": ["256 GB", "512 GB", "1 TB", "2 TB"], "image": "iphone-18-pro-max.png", "source": "https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/iphone-18-pro-max.png", "id": "models-24", "available": true, "price": "Consultar"}], "products": [{"name": "Xiaomi / POCO", "cat": "Smartphones", "desc": "Modelos selecionados para diferentes necessidades.", "image": "xiaomi-17-ultra.png", "alt": "Xiaomi 17 Ultra em várias cores, imagem representativa da categoria", "tag": "Android", "price": "Consultar", "id": "products-0", "available": true}, {"name": "PlayStation", "cat": "Games", "desc": "Consoles e acessórios. Consulte versões e disponibilidade.", "image": "ps5.jpg", "alt": "PS5, imagem representativa da categoria", "tag": "Games", "price": "Consultar", "id": "products-1", "available": true}, {"name": "Starlink Mini", "cat": "Tecnologia", "desc": "Consulte disponibilidade e condições para sua região.", "image": "starlink.webp", "alt": "Antena Starlink Mini", "tag": "Conectividade", "price": "Consultar", "id": "products-2", "available": true}]}}
+{
+  "data": {
+    "models": [
+      {
+        "name": "iPhone 12",
+        "generation": 12,
+        "colors": [
+          "Preto",
+          "Branco",
+          "Vermelho",
+          "Verde",
+          "Azul",
+          "Roxo"
+        ],
+        "storage": [
+          "64 GB",
+          "128 GB",
+          "256 GB"
+        ],
+        "image": "iphone-12.png",
+        "source": "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111876_sp830-iphone12-ios14-2x.png",
+        "id": "models-0",
+        "available": true,
+        "price": "Consultar"
+      },
+      {
+        "name": "iPhone 12 Pro",
+        "generation": 12,
+        "colors": [
+          "Prateado",
+          "Grafite",
+          "Dourado",
+          "Azul-Pacífico"
+        ],
+        "storage": [
+          "128 GB",
+          "256 GB",
+          "512 GB"
+        ],
+        "image": "iphone-12-pro.png",
+        "source": "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111875_iphone12pro-ios14.png",
+        "id": "models-1",
+        "available": true,
+        "price": "Consultar"
+      },
+      {
+        "name": "iPhone 12 mini",
+        "generation": 12,
+        "colors": [
+          "Preto",
+          "Branco",
+          "Vermelho",
+          "Verde",
+          "Azul",
+          "Roxo"
+        ],
+        "storage": [
+          "64 GB",
+          "128 GB",
+          "256 GB"
+        ],
+        "image": "iphone-12-mini.png",
+        "source": "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111877_sp829-iphone12mini--ios14.png",
+        "id": "models-2",
+        "available": true,
+        "price": "Consultar"
+      },
+      {
+        "name": "iPhone 12 Pro Max",
+        "generation": 12,
+        "colors": [
+          "Prateado",
+          "Grafite",
+          "Dourado",
+          "Azul-Pacífico"
+        ],
+        "storage": [
+          "128 GB",
+          "256 GB",
+          "512 GB"
+        ],
+        "image": "iphone-12-pro-max.png",
+        "source": "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111875_iphone12pro-ios14.png",
+        "id": "models-3",
+        "available": true,
+        "price": "Consultar"
+      },
+      {
+        "name": "iPhone 13",
+        "generation": 13,
+        "colors": [
+          "Vermelho",
+          "Estelar",
+          "Meia-noite",
+          "Azul",
+          "Rosa",
+          "Verde"
+        ],
+        "storage": [
+          "128 GB",
+          "256 GB",
+          "512 GB"
+        ],
+        "image": "iphone-13.png",
+        "source": "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111872_iphone13-colors-480.png",
+        "id": "models-4",
+        "available": true,
+        "price": "Consultar"
+      },
+      {
+        "name": "iPhone 13 Pro",
+        "generation": 13,
+        "colors": [
+          "Grafite",
+          "Dourado",
+          "Prateado",
+          "Azul-Sierra",
+          "Verde-Alpino"
+        ],
+        "storage": [
+          "128 GB",
+          "256 GB",
+          "512 GB",
+          "1 TB"
+        ],
+        "image": "iphone-13-pro.png",
+        "source": "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111871_iphone13-pro-colors-480.png",
+        "id": "models-5",
+        "available": true,
+        "price": "Consultar"
+      },
+      {
+        "name": "iPhone 13 mini",
+        "generation": 13,
+        "colors": [
+          "Vermelho",
+          "Estelar",
+          "Meia-noite",
+          "Azul",
+          "Rosa",
+          "Verde"
+        ],
+        "storage": [
+          "128 GB",
+          "256 GB",
+          "512 GB"
+        ],
+        "image": "iphone-13-mini.png",
+        "source": "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111872_iphone13-mini-colors-480.png",
+        "id": "models-6",
+        "available": true,
+        "price": "Consultar"
+      },
+      {
+        "name": "iPhone 13 Pro Max",
+        "generation": 13,
+        "colors": [
+          "Grafite",
+          "Dourado",
+          "Prateado",
+          "Azul-Sierra",
+          "Verde-Alpino"
+        ],
+        "storage": [
+          "128 GB",
+          "256 GB",
+          "512 GB",
+          "1 TB"
+        ],
+        "image": "iphone-13-pro-max.png",
+        "source": "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111870_iphone13-pro-max-colors-480.png",
+        "id": "models-7",
+        "available": true,
+        "price": "Consultar"
+      },
+      {
+        "name": "iPhone 14",
+        "generation": 14,
+        "colors": [
+          "Meia-noite",
+          "Roxo",
+          "Estelar",
+          "Vermelho",
+          "Azul",
+          "Amarelo"
+        ],
+        "storage": [
+          "128 GB",
+          "256 GB",
+          "512 GB"
+        ],
+        "image": "iphone-14.png",
+        "source": "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111850_iphone-14_1.png",
+        "id": "models-8",
+        "available": true,
+        "price": "Consultar"
+      },
+      {
+        "name": "iPhone 14 Pro",
+        "generation": 14,
+        "colors": [
+          "Preto-espacial",
+          "Prateado",
+          "Dourado",
+          "Roxo-profundo"
+        ],
+        "storage": [
+          "128 GB",
+          "256 GB",
+          "512 GB",
+          "1 TB"
+        ],
+        "image": "iphone-14-pro.png",
+        "source": "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111846_sp875-sp876-iphone14-pro-promax.png",
+        "id": "models-9",
+        "available": true,
+        "price": "Consultar"
+      },
+      {
+        "name": "iPhone 14 Plus",
+        "generation": 14,
+        "colors": [
+          "Meia-noite",
+          "Roxo",
+          "Estelar",
+          "Vermelho",
+          "Azul",
+          "Amarelo"
+        ],
+        "storage": [
+          "128 GB",
+          "256 GB",
+          "512 GB"
+        ],
+        "image": "iphone-14-plus.png",
+        "source": "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111850_iphone-14_1.png",
+        "id": "models-10",
+        "available": true,
+        "price": "Consultar"
+      },
+      {
+        "name": "iPhone 14 Pro Max",
+        "generation": 14,
+        "colors": [
+          "Preto-espacial",
+          "Prateado",
+          "Dourado",
+          "Roxo-profundo"
+        ],
+        "storage": [
+          "128 GB",
+          "256 GB",
+          "512 GB",
+          "1 TB"
+        ],
+        "image": "iphone-14-pro-max.png",
+        "source": "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111846_sp875-sp876-iphone14-pro-promax.png",
+        "id": "models-11",
+        "available": true,
+        "price": "Consultar"
+      },
+      {
+        "name": "iPhone 15",
+        "generation": 15,
+        "colors": [
+          "Preto",
+          "Azul",
+          "Verde",
+          "Amarelo",
+          "Rosa"
+        ],
+        "storage": [
+          "128 GB",
+          "256 GB",
+          "512 GB"
+        ],
+        "image": "iphone-15.png",
+        "source": "https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/iphone_15_hero.png",
+        "id": "models-12",
+        "available": true,
+        "price": "Consultar"
+      },
+      {
+        "name": "iPhone 15 Pro",
+        "generation": 15,
+        "colors": [
+          "Titânio preto",
+          "Titânio branco",
+          "Titânio azul",
+          "Titânio natural"
+        ],
+        "storage": [
+          "128 GB",
+          "256 GB",
+          "512 GB",
+          "1 TB"
+        ],
+        "image": "iphone-15-pro.png",
+        "source": "https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/iphone_15_pro.png",
+        "id": "models-13",
+        "available": true,
+        "price": "Consultar"
+      },
+      {
+        "name": "iPhone 15 Plus",
+        "generation": 15,
+        "colors": [
+          "Preto",
+          "Azul",
+          "Verde",
+          "Amarelo",
+          "Rosa"
+        ],
+        "storage": [
+          "128 GB",
+          "256 GB",
+          "512 GB"
+        ],
+        "image": "iphone-15-plus.png",
+        "source": "https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/iphone_15_plus_hero.png",
+        "id": "models-14",
+        "available": true,
+        "price": "Consultar"
+      },
+      {
+        "name": "iPhone 15 Pro Max",
+        "generation": 15,
+        "colors": [
+          "Titânio preto",
+          "Titânio branco",
+          "Titânio azul",
+          "Titânio natural"
+        ],
+        "storage": [
+          "256 GB",
+          "512 GB",
+          "1 TB"
+        ],
+        "image": "iphone-15-pro-max.png",
+        "source": "https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/iphone-15-pro-max.png",
+        "id": "models-15",
+        "available": true,
+        "price": "Consultar"
+      },
+      {
+        "name": "iPhone 16",
+        "generation": 16,
+        "colors": [
+          "Preto",
+          "Branco",
+          "Rosa",
+          "Verde-acinzentado",
+          "Ultramarino"
+        ],
+        "storage": [
+          "128 GB",
+          "256 GB",
+          "512 GB"
+        ],
+        "image": "iphone-16.png",
+        "source": "https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/iphone-16.png",
+        "id": "models-16",
+        "available": true,
+        "price": "Consultar"
+      },
+      {
+        "name": "iPhone 16 Pro",
+        "generation": 16,
+        "colors": [
+          "Titânio preto",
+          "Titânio branco",
+          "Titânio natural",
+          "Titânio-deserto"
+        ],
+        "storage": [
+          "128 GB",
+          "256 GB",
+          "512 GB",
+          "1 TB"
+        ],
+        "image": "iphone-16-pro.png",
+        "source": "https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/121031-iphone-16-pro.png",
+        "id": "models-17",
+        "available": true,
+        "price": "Consultar"
+      },
+      {
+        "name": "iPhone 16 Plus",
+        "generation": 16,
+        "colors": [
+          "Preto",
+          "Branco",
+          "Rosa",
+          "Verde-acinzentado",
+          "Ultramarino"
+        ],
+        "storage": [
+          "128 GB",
+          "256 GB",
+          "512 GB"
+        ],
+        "image": "iphone-16-plus.png",
+        "source": "https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/121030-iphone-16-plus.png",
+        "id": "models-18",
+        "available": true,
+        "price": "Consultar"
+      },
+      {
+        "name": "iPhone 16 Pro Max",
+        "generation": 16,
+        "colors": [
+          "Titânio preto",
+          "Titânio branco",
+          "Titânio natural",
+          "Titânio-deserto"
+        ],
+        "storage": [
+          "256 GB",
+          "512 GB",
+          "1 TB"
+        ],
+        "image": "iphone-16-pro-max.png",
+        "source": "https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/121032-iphone-16-pro-max.png",
+        "id": "models-19",
+        "available": true,
+        "price": "Consultar"
+      },
+      {
+        "name": "iPhone 17",
+        "generation": 17,
+        "colors": [
+          "Preto",
+          "Branco",
+          "Azul-névoa",
+          "Sálvia",
+          "Lavanda"
+        ],
+        "storage": [
+          "256 GB",
+          "512 GB"
+        ],
+        "image": "iphone-17.png",
+        "source": "https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/iphone-17-hero.png",
+        "id": "models-20",
+        "available": true,
+        "price": "Consultar"
+      },
+      {
+        "name": "iPhone 17 Pro",
+        "generation": 17,
+        "colors": [
+          "Prateado",
+          "Laranja-cósmico",
+          "Azul-intenso"
+        ],
+        "storage": [
+          "256 GB",
+          "512 GB",
+          "1 TB"
+        ],
+        "image": "iphone-17-pro.png",
+        "source": "https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/iphone-17-pro-17-pro-max-hero.png",
+        "id": "models-21",
+        "available": true,
+        "price": "Consultar"
+      },
+      {
+        "name": "iPhone 17 Pro Max",
+        "generation": 17,
+        "colors": [
+          "Prateado",
+          "Laranja-cósmico",
+          "Azul-intenso"
+        ],
+        "storage": [
+          "256 GB",
+          "512 GB",
+          "1 TB",
+          "2 TB"
+        ],
+        "image": "iphone-17-pro-max.png",
+        "source": "https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/iphone-17-pro-17-pro-max-hero.png",
+        "id": "models-22",
+        "available": true,
+        "price": "Consultar"
+      },
+      {
+        "name": "iPhone 18 Pro",
+        "generation": 18,
+        "colors": [
+          "Preto",
+          "Prateado",
+          "Glacial",
+          "Bordô"
+        ],
+        "storage": [
+          "256 GB",
+          "512 GB",
+          "1 TB",
+          "2 TB"
+        ],
+        "image": "iphone-18-pro.png",
+        "source": "https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/iphone-18-pro.png",
+        "id": "models-23",
+        "available": true,
+        "price": "Consultar"
+      },
+      {
+        "name": "iPhone 18 Pro Max",
+        "generation": 18,
+        "colors": [
+          "Preto",
+          "Prateado",
+          "Glacial",
+          "Bordô"
+        ],
+        "storage": [
+          "256 GB",
+          "512 GB",
+          "1 TB",
+          "2 TB"
+        ],
+        "image": "iphone-18-pro-max.png",
+        "source": "https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/iphone-18-pro-max.png",
+        "id": "models-24",
+        "available": true,
+        "price": "Consultar"
+      }
+    ],
+    "products": [
+      {
+        "name": "Xiaomi / POCO",
+        "cat": "Smartphones",
+        "desc": "Modelos selecionados para diferentes necessidades.",
+        "image": "xiaomi-17-ultra.png",
+        "alt": "Xiaomi 17 Ultra em várias cores, imagem representativa da categoria",
+        "tag": "Android",
+        "price": "Consultar",
+        "id": "products-0",
+        "available": true
+      },
+      {
+        "name": "PlayStation",
+        "cat": "Games",
+        "desc": "Consoles e acessórios. Consulte versões e disponibilidade.",
+        "image": "ps5.jpg",
+        "alt": "PS5, imagem representativa da categoria",
+        "tag": "Games",
+        "price": "Consultar",
+        "id": "products-1",
+        "available": true
+      },
+      {
+        "name": "Starlink Mini",
+        "cat": "Tecnologia",
+        "desc": "Consulte disponibilidade e condições para sua região.",
+        "image": "starlink.webp",
+        "alt": "Antena Starlink Mini",
+        "tag": "Conectividade",
+        "price": "Consultar",
+        "id": "products-2",
+        "available": true
+      },
+      {
+        "id": "dji-mini",
+        "name": "DJI Mini 4 Pro",
+        "cat": "Drones",
+        "tag": "DJI Mini",
+        "desc": "Drone compacto para fotos e vídeos aéreos. Consulte as opções de kit e controle.",
+        "image": "dji-mini.webp",
+        "alt": "DJI Mini 4 Pro",
+        "price": "Consultar",
+        "available": true,
+        "source": "https://www.dji.com/mini-4-pro",
+        "imageSource": "https://www-cdn.djiits.com/cms/uploads/892e39b4b76dc5a83b267ed12ce69b97@374*374.png"
+      },
+      {
+        "id": "dji-air",
+        "name": "DJI Air 3S",
+        "cat": "Drones",
+        "tag": "DJI Air",
+        "desc": "Linha Air para quem quer explorar novas perspectivas. Consulte kits e acessórios.",
+        "image": "dji-air.webp",
+        "alt": "DJI Air 3S",
+        "price": "Consultar",
+        "available": true,
+        "source": "https://www.dji.com/air-3s",
+        "imageSource": "https://www-cdn.djiits.com/cms/uploads/bf5d8b28926aec21c46e679888333de2@374*374.png"
+      },
+      {
+        "id": "dji-avata",
+        "name": "DJI Avata 2",
+        "cat": "Drones",
+        "tag": "DJI Avata",
+        "desc": "Drone FPV para uma experiência de voo imersiva. Consulte o conjunto de óculos e controle.",
+        "image": "dji-avata.webp",
+        "alt": "DJI Avata 2",
+        "price": "Consultar",
+        "available": true,
+        "source": "https://www.dji.com/avata-2",
+        "imageSource": "https://www-cdn.djiits.com/cms/uploads/ac5a1e8f3668952185dbaba1c36ae2e3@374*374.png"
+      },
+      {
+        "id": "dji-neo",
+        "name": "DJI Neo",
+        "cat": "Drones",
+        "tag": "DJI Neo",
+        "desc": "Drone compacto para registrar seus momentos. Consulte as opções de kit.",
+        "image": "dji-neo.webp",
+        "alt": "DJI Neo",
+        "price": "Consultar",
+        "available": true,
+        "source": "https://www.dji.com/neo",
+        "imageSource": "https://www-cdn.djiits.com/cms/uploads/a2d5733d4fe4b62050a3a1ea1109612d@374*374.png"
+      },
+      {
+        "id": "boombox3",
+        "name": "JBL Boombox 3",
+        "cat": "Caixas de som",
+        "tag": "JBL Boombox",
+        "desc": "Caixa de som portátil Bluetooth. Consulte cores e disponibilidade.",
+        "image": "boombox3.webp",
+        "alt": "JBL Boombox 3",
+        "price": "Consultar",
+        "available": true,
+        "source": "",
+        "imageSource": "https://www.jbl.com.br/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw10cb1df1/1_JBL_BOOMBOX_3_HERO_BLACK_33216_x2.png?sh=535&sw=535"
+      },
+      {
+        "id": "boombox4",
+        "name": "JBL Boombox 4",
+        "cat": "Caixas de som",
+        "tag": "JBL Boombox",
+        "desc": "A nova geração da linha Boombox. Consulte cores e condições.",
+        "image": "boombox4.webp",
+        "alt": "JBL Boombox 4",
+        "price": "Consultar",
+        "available": true,
+        "source": "",
+        "imageSource": "https://www.jbl.com.br/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwe154c3b4/LS_JBL_BOOMBOX_4_HERO_BLACK_0019_x4.png?sh=535&sw=535"
+      },
+      {
+        "id": "party120",
+        "name": "JBL PartyBox Club 120",
+        "cat": "Caixas de som",
+        "tag": "JBL PartyBox",
+        "desc": "Som e iluminação para suas festas. Consulte as cores disponíveis.",
+        "image": "party120.webp",
+        "alt": "JBL PartyBox Club 120",
+        "price": "Consultar",
+        "available": true,
+        "source": "",
+        "imageSource": "https://www.jbl.com.br/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw511837c7/JBL_PARTYBOX_CLUB_120_SENSATION_WHITE_HER0_1_026_x3.png?sh=535&sw=535"
+      },
+      {
+        "id": "party320",
+        "name": "JBL PartyBox Stage 320",
+        "cat": "Caixas de som",
+        "tag": "JBL PartyBox",
+        "desc": "Caixa de som para festas, com rodas e alça para transporte.",
+        "image": "party320.webp",
+        "alt": "JBL PartyBox Stage 320",
+        "price": "Consultar",
+        "available": true,
+        "source": "",
+        "imageSource": "https://www.jbl.com.br/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw5bbcbe7f/JBL_PARTYBOX_STAGE_320_HERO_2_47988_x3.png?sh=535&sw=535"
+      },
+      {
+        "id": "party520",
+        "name": "JBL PartyBox 520",
+        "cat": "Caixas de som",
+        "tag": "JBL PartyBox",
+        "desc": "Linha PartyBox com bateria integrada, luzes e rodas para transporte.",
+        "image": "party520.webp",
+        "alt": "JBL PartyBox 520",
+        "price": "Consultar",
+        "available": true,
+        "source": "",
+        "imageSource": ""
+      },
+      {
+        "id": "bose-s1",
+        "name": "Bose S1 Pro",
+        "cat": "Caixas de som",
+        "tag": "Bose",
+        "desc": "Sistema de som portátil para música, voz e instrumentos. Consulte disponibilidade.",
+        "image": "bose-s1.webp",
+        "alt": "Bose S1 Pro",
+        "price": "Consultar",
+        "available": true,
+        "source": "https://www.bose.com/p/portable-pa/s1-pro-portable-bluetooth-speaker-system/S1PRO-SPEAKERWIRELESS.html",
+        "imageSource": "https://assets.bosecreative.com/transform/65f92a03-ed4f-411b-8edf-fa0c6b106ecf/S1_Pro_Front_Hero_1200x1022_RGB?io=width:816,height:667,transform:fit"
+      },
+      {
+        "id": "bose-plus",
+        "name": "Bose S1 Pro+",
+        "cat": "Caixas de som",
+        "tag": "Bose",
+        "desc": "Evolução da S1 Pro, com mixer integrado. Consulte os acessórios sem fio separadamente.",
+        "image": "bose-plus.webp",
+        "alt": "Bose S1 Pro+",
+        "price": "Consultar",
+        "available": true,
+        "source": "https://www.bose.com/p/portable-pa/s1-pro-wireless-pa-system/S1PROP-SPEAKERWIRELESS.html",
+        "imageSource": "https://assets.bosecreative.com/transform/65f22bef-4116-482c-b7cf-8821767a532d/s1_pro_plus_0_gallery_01_transparent?io=width:816,height:667,transform:fit"
+      },
+      {
+        "id": "scooter",
+        "name": "Patinete elétrico Xiaomi 5 Pro",
+        "cat": "Mobilidade",
+        "tag": "Patinetes",
+        "desc": "Xiaomi Electric Scooter 5 Pro. Consulte condições, disponibilidade e outros modelos.",
+        "image": "scooter.webp",
+        "alt": "Patinete elétrico Xiaomi 5 Pro",
+        "price": "Consultar",
+        "available": true,
+        "source": "https://www.mi.com/global/product/xiaomi-electric-scooter-5-pro/",
+        "imageSource": "//i02.appmifile.com/981_operatorx_operatorx_opx/15/01/2025/ef85fe8debc26c84903e7c8439a28905.png"
+      },
+      {
+        "id": "meta",
+        "name": "Ray-Ban Meta Headliner (Gen 2)",
+        "cat": "Óculos inteligentes",
+        "tag": "Ray-Ban Meta",
+        "desc": "Óculos inteligentes da linha Ray-Ban Meta. Consulte armações, lentes e outras versões.",
+        "image": "meta.webp",
+        "alt": "Ray-Ban Meta Headliner (Gen 2)",
+        "price": "Consultar",
+        "available": true,
+        "source": "https://www.ray-ban.com/brazil/electronics/RW4013ray-ban%2Bmeta%2Bheadliner%2B-%2Bgen%2B2-preto/8056262721285",
+        "imageSource": "https://images2.ray-ban.com//prod-onecp-record-files/pieyewear/ebcc69a1-0128-4a7f-9adc-b3a00166e141/0RW4013__601_71__P21__shad__qt.png?impolicy=RB_RB_FBShare"
+      }
+    ]
+  }
+}

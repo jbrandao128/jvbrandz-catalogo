@@ -1,70 +1,44 @@
-const escapeHtml=value=>String(value).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-// Catálogo carregado do servidor.
-const INSTAGRAM_URL="https://www.instagram.com/jvbrandz/";
-let iphoneModels=[];
-let products=[];
-const grid=document.getElementById("products"), search=document.getElementById("search");
-let category="Todos";
+const escapeHtml=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const normalize=value=>String(value).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+const INSTAGRAM_URL='https://www.instagram.com/jvbrandz/';
+let iphoneModels=[],products=[],category='Todos',selectedProduct;
+const grid=document.getElementById('products'),search=document.getElementById('search'),filters=document.getElementById('filters'),sort=document.getElementById('sort');
+const dialog=document.getElementById('iphoneDialog'),modelSelect=document.getElementById('iphoneModel'),colorSelect=document.getElementById('iphoneColor'),storageSelect=document.getElementById('iphoneStorage'),summary=document.getElementById('iphoneSummary'),status=document.getElementById('copyStatus');
+const productDialog=document.getElementById('productDialog'),quantity=document.getElementById('productQuantity'),productSummary=document.getElementById('productSummary'),productStatus=document.getElementById('productStatus');
 function render(){
- const term=search.value.trim().toLowerCase();
- const filtered=products.filter(p=>(category==="Todos"||p.cat===category)&&(`${escapeHtml(p.name)} ${escapeHtml(p.cat)} ${escapeHtml(p.desc)} ${p.generation ? iphoneModels.filter(model => model.generation === p.generation).map(model => model.name).join(" ") : ""}`).toLowerCase().includes(term));
- grid.innerHTML=filtered.length?filtered.map(p=>`<article class="product"><div class="product-visual"><span class="pill">${escapeHtml(p.tag)}</span><img class="product-photo" src="${escapeHtml(p.image)}" alt="${escapeHtml(p.alt)}" loading="lazy" decoding="async"></div><div class="product-info"><small>${escapeHtml(p.cat)}</small><h3>${escapeHtml(p.name)}</h3><p>${escapeHtml(p.desc)}</p><div class="product-bottom"><span class="price">${escapeHtml(p.price)}</span>${p.generation ? `<button class="ask" data-generation="${p.generation}">Escolher opções</button>` : `<a class="ask" href="${INSTAGRAM_URL}" target="_blank" rel="noopener noreferrer">Consultar ↗</a>`}</div></div></article>`).join(""):`<div class="empty">Nenhum produto encontrado. Tente outra busca.</div>`;
+ const words=normalize(search.value.trim()).split(/\s+/).filter(Boolean);
+ const filtered=products.filter(p=>{
+  const haystack=normalize([p.name,p.cat,p.desc,p.tag,p.generation?iphoneModels.filter(m=>m.generation===p.generation).map(m=>m.name).join(' '):''].join(' '));
+  return(category==='Todos'||p.cat===category)&&words.every(w=>haystack.includes(w));
+ });
+ if(sort.value!=='default')filtered.sort((a,b)=>a.name.localeCompare(b.name,'pt-BR',{numeric:true})*(sort.value==='az'?1:-1));
+ document.getElementById('resultCount').textContent=`${filtered.length} ${filtered.length===1?'resultado':'resultados'}${category==='Todos'?' no catálogo':' em '+category}`;
+ grid.innerHTML=filtered.length?filtered.map(p=>{
+ const action=p.generation?`data-generation="${p.generation}"`:`data-product="${escapeHtml(p.id)}"`;
+ return `<article class="product"><button class="product-visual" ${action} aria-label="Ver ${escapeHtml(p.name)}"><span class="pill">${escapeHtml(p.tag)}</span><img class="product-photo" src="${escapeHtml(p.image)}" alt="${escapeHtml(p.alt)}" loading="lazy" decoding="async"></button><div class="product-info"><small>${escapeHtml(p.cat)}</small><h3>${escapeHtml(p.name)}</h3><p>${escapeHtml(p.desc)}</p><div class="product-bottom"><span class="price">${escapeHtml(p.price)}</span><button class="ask" ${action}>${p.generation?'Escolher opções':'Ver detalhes'}</button></div></div></article>`;
+ }).join(''):'<div class="empty">Nenhum produto encontrado. Tente outra palavra ou categoria.</div>';
 }
-document.querySelectorAll(".filter").forEach(b=>b.addEventListener("click",()=>{category=b.dataset.cat;document.querySelectorAll(".filter").forEach(x=>x.classList.toggle("active",x===b));render()}));
-search.addEventListener("input",render);
-document.getElementById("year").textContent=new Date().getFullYear();
+filters.addEventListener('click',e=>{const b=e.target.closest('[data-cat]');if(!b)return;category=b.dataset.cat;filters.querySelectorAll('button').forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',String(x===b))});render()});
+search.addEventListener('input',render);sort.addEventListener('change',render);
+document.getElementById('year').textContent=new Date().getFullYear();
+function updateSummary(){summary.value=`Olá! Gostaria de consultar o ${modelSelect.value}, cor ${colorSelect.value}, com ${storageSelect.value}. Qual o valor e a disponibilidade?`;status.textContent=''}
+function updateModel(){const m=iphoneModels.find(m=>m.name===modelSelect.value);if(!m)return;document.getElementById('selectedPrice').textContent=m.price;colorSelect.replaceChildren(...m.colors.map(v=>new Option(v,v)));storageSelect.replaceChildren(...m.storage.map(v=>new Option(v,v)));const photo=document.getElementById('iphonePreview');photo.src=m.image;photo.alt=m.name+' — imagem de referência';updateSummary()}
+function updateProductSummary(){if(!selectedProduct)return;const n=Math.min(99,Math.max(1,Math.floor(Number(quantity.value)||1)));productSummary.value=`Olá! Gostaria de consultar ${selectedProduct.name}. Quantidade: ${n}. Quais são o valor, as opções e a disponibilidade?`;productStatus.textContent=''}
+grid.addEventListener('click',e=>{
+ const b=e.target.closest('[data-generation],[data-product]');if(!b)return;
+ if(b.dataset.generation){const m=iphoneModels.find(m=>m.generation===Number(b.dataset.generation));if(!m)return;modelSelect.value=m.name;updateModel();dialog.showModal();return}
+ selectedProduct=products.find(p=>p.id===b.dataset.product);if(!selectedProduct)return;
+ document.getElementById('productTitle').textContent=selectedProduct.name;document.getElementById('productCategory').textContent=selectedProduct.cat;document.getElementById('productDescription').textContent=selectedProduct.desc;const img=document.getElementById('productPreview');img.src=selectedProduct.image;img.alt=selectedProduct.alt;quantity.value='1';updateProductSummary();productDialog.showModal();
+});
+modelSelect.addEventListener('change',updateModel);colorSelect.addEventListener('change',updateSummary);storageSelect.addEventListener('change',updateSummary);quantity.addEventListener('input',updateProductSummary);quantity.addEventListener('change',()=>{quantity.value=String(Math.min(99,Math.max(1,Math.floor(Number(quantity.value)||1))));updateProductSummary()});
+document.getElementById('closeIphone').addEventListener('click',()=>dialog.close());document.getElementById('closeProduct').addEventListener('click',()=>productDialog.close());
+async function copyMessage(field,feedback){try{await navigator.clipboard.writeText(field.value);feedback.textContent='Copiado. Abra o Instagram e cole a mensagem no atendimento.'}catch{field.focus();field.select();feedback.textContent='Selecione e copie a mensagem para enviar no Instagram.'}}
+document.getElementById('copyIphone').addEventListener('click',()=>copyMessage(summary,status));document.getElementById('copyProduct').addEventListener('click',()=>copyMessage(productSummary,productStatus));
+async function loadCatalog(){try{
+ const response=await fetch('./catalog.json?v=20261112');if(!response.ok)throw new Error('catalog');const result=await response.json();iphoneModels=result.data.models.filter(p=>p.available);products=result.data.products.filter(p=>p.available);
+ const generations=[...new Set(iphoneModels.map(m=>m.generation))].sort((a,b)=>a-b);
+ products=[...generations.map(g=>{const m=iphoneModels.find(m=>m.generation===g);return {id:'iphone-'+g,name:`Linha iPhone ${g}`,cat:'iPhones',desc:'Escolha modelo, cor e armazenamento. Disponibilidade sob consulta.',image:m.image,alt:m.name,tag:'Configure seu iPhone',price:'Consultar',generation:g}}),...products];
+ const cats=['Todos',...new Set(products.map(p=>p.cat))];filters.innerHTML=cats.map(c=>`<button class="filter${c==='Todos'?' active':''}" data-cat="${escapeHtml(c)}" aria-pressed="${c==='Todos'}">${escapeHtml(c)}</button>`).join('');
+ modelSelect.replaceChildren(...iphoneModels.map(m=>new Option(m.name,m.name)));render();
+ }catch{grid.innerHTML='<div class="empty">Não foi possível carregar o catálogo. Atualize a página para tentar novamente.</div>';document.getElementById('resultCount').textContent='Catálogo indisponível no momento.'}}
 loadCatalog();
-
-const dialog = document.getElementById("iphoneDialog");
-const modelSelect = document.getElementById("iphoneModel");
-const colorSelect = document.getElementById("iphoneColor");
-const storageSelect = document.getElementById("iphoneStorage");
-const summary = document.getElementById("iphoneSummary");
-const status = document.getElementById("copyStatus");
-
-function updateSummary() {
- summary.value = `Olá! Gostaria de consultar o ${modelSelect.value}, cor ${colorSelect.value}, com ${storageSelect.value}. Qual o valor e a disponibilidade?`;
- status.textContent = "";
-}
-function updateModel() {
- const model = iphoneModels.find(item => item.name === modelSelect.value);
- document.getElementById("selectedPrice").textContent = model.price;
- colorSelect.replaceChildren(...model.colors.map(color => new Option(color,color)));
- storageSelect.replaceChildren(...model.storage.map(size => new Option(size,size)));
- const photo = document.getElementById("iphonePreview");
- photo.src = model.image;
- photo.alt = model.name + " — imagem de referência do modelo";
- updateSummary();
-}
-grid.addEventListener("click", event => {
- const button = event.target.closest("[data-generation]");
- if (!button) return;
- const model = iphoneModels.find(item => item.generation === Number(button.dataset.generation));
- modelSelect.value = model.name;
- updateModel();
- dialog.showModal();
-});
-modelSelect.addEventListener("change", updateModel);
-colorSelect.addEventListener("change", updateSummary);
-storageSelect.addEventListener("change", updateSummary);
-document.getElementById("closeIphone").addEventListener("click", () => dialog.close());
-document.getElementById("copyIphone").addEventListener("click", async () => {
- try {
-  await navigator.clipboard.writeText(summary.value);
-  status.textContent = "Copiado. Abra o Instagram e cole a mensagem no atendimento.";
- } catch {
-  summary.focus();
-  summary.select();
-  status.textContent = "Selecione e copie a mensagem para enviar no Instagram.";
- }
-});
-
-async function loadCatalog(){
-try{const response=await fetch('./catalog.json');if(!response.ok)throw new Error();const result=await response.json();iphoneModels=result.data.models.filter(p=>p.available);products=result.data.products.filter(p=>p.available);
-for (let generation = 30; generation >= 12; generation--) {
- const model = iphoneModels.find(item => item.generation === generation);
- if (!model) continue;
- products.unshift({name: `Linha iPhone ${generation}`, cat: "iPhones", desc: "Escolha modelo, cor e armazenamento. Disponibilidade sob consulta.", image: model.image, alt: model.name, tag: "Configure seu iPhone", price: "Consultar", generation});
-}
-
-modelSelect.replaceChildren(...iphoneModels.map(model=>new Option(model.name,model.name)));render();}catch{grid.textContent='Não foi possível carregar o catálogo. Atualize a página para tentar novamente.'}}

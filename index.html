@@ -29,6 +29,11 @@ dialog{width:min(740px,calc(100% - 28px));max-height:90vh;overflow:auto;backgrou
 
 .hero-art{min-height:400px}.brand-composition{position:relative;width:340px;max-width:100%;height:280px}.hero-jv-logo{position:absolute;inset:20px 100px 20px 0;background:white;border-radius:32px;overflow:hidden;box-shadow:0 22px 70px #0008;border:1px solid #555}.hero-jv-logo img{display:block;width:100%;height:100%;object-fit:cover;transform:scale(2.25);transform-origin:50% 46%}.hero-art .tag1{top:0;right:0}.hero-art .tag2{bottom:0;left:0}@media(max-width:520px){.hero-art{min-height:370px}.brand-composition{width:310px;height:260px}.hero-jv-logo{inset:20px 90px 20px 0}.hero-art .tag1{right:0}.hero-art .tag2{left:0}}
 .hero-jv-logo{inset:0;background:transparent;border:0;border-radius:0;box-shadow:none;overflow:visible}.hero-jv-logo img{object-fit:contain;transform:scale(1.7);transform-origin:50% 48%;filter:drop-shadow(0 0 2px #ffffff80)}
+
+.tools{display:block}.search{width:100%;font-size:16px;padding:17px 20px;margin-bottom:16px}.filters{gap:8px}.filter{min-height:42px}.catalog-toolbar{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:22px;color:#b8b8b8;font-size:13px}.catalog-toolbar select{background:#171717;color:white;border:1px solid #444;border-radius:8px;padding:10px;margin-left:8px}.product{display:flex;flex-direction:column}.product-info{flex:1;display:flex;flex-direction:column}.product-bottom{margin-top:auto}.product-info h3{line-height:1.35}.product-visual{width:100%;border:0;cursor:pointer}.product-visual:focus-visible,.filter:focus-visible,.ask:focus-visible{outline:3px solid #eac672;outline-offset:-3px}.product-photo{transition:transform .2s}.product-visual:hover .product-photo{transform:scale(1.04)}.stock-note{color:#aaa;font-size:13px;line-height:1.6}.detail-layout{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:24px}.detail-photo{background:white;border-radius:14px;padding:20px;display:flex;align-items:center}.detail-photo img{width:100%;height:230px;object-fit:contain}.detail-layout h2{margin:12px 24px 16px 0;font-size:26px}.detail-layout p{line-height:1.6;font-size:14px}.detail-layout label{display:block;font-size:13px;margin:16px 0 8px}#productQuantity{padding:10px;width:90px;background:#252525;color:#fff;border:1px solid #555;border-radius:8px}#productStatus{font-size:13px;min-height:20px;color:#bbb}#catalogo{scroll-margin-top:76px}.brand-composition{height:300px}.hero-art{min-height:340px}
+@media(min-width:1100px){.grid{grid-template-columns:repeat(4,1fr)}.product-visual{height:230px;padding:44px 18px 18px}.product-info{padding:17px}.product-info h3{font-size:17px}}
+@media(max-width:520px){.catalog-toolbar{align-items:flex-start;flex-direction:column;gap:4px}.filters{flex-wrap:nowrap;overflow:auto;padding-bottom:8px}.filter{white-space:nowrap;flex:none}.detail-layout{grid-template-columns:1fr;gap:18px}.detail-photo img{height:180px}.hero-art{min-height:280px}.brand-composition{width:260px;height:230px}.hero-jv-logo img{transform:scale(1.35)}.hero{padding-bottom:20px}section{padding:48px 0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 </style>
 </head>
 <body>
@@ -42,13 +47,13 @@ dialog{width:min(740px,calc(100% - 28px));max-height:90vh;overflow:auto;backgrou
 <div><div class="eyebrow">Tecnologia • Estilo • Confiança</div><h1>Seu próximo nível começa <span>aqui.</span></h1>
 <p>Encontre tecnologia que acompanha seu ritmo. Produtos selecionados, atendimento próximo e uma experiência de compra sem complicação.</p>
 <div class="hero-actions"><a class="btn" href="#catalogo">Ver catálogo <span>→</span></a><a class="btn secondary" href="https://www.instagram.com/jvbrandz/" target="_blank" rel="noopener noreferrer">Fale com a gente</a></div></div>
-<div class="hero-art"><div class="brand-composition"><div class="hero-jv-logo"><img src="jvbrandz-transparent.png" alt="JvBrandz"></div></div><div class="orbit-tag tag1"><strong>Escolha seu iPhone</strong>Modelo, cor e armazenamento</div><div class="orbit-tag tag2"><strong>Atendimento direto</strong>@jvbrandz no Instagram</div></div>
+<div class="hero-art"><div class="brand-composition"><div class="hero-jv-logo"><img src="jvbrandz-transparent.png" alt="JvBrandz"></div></div></div>
 </div></section>
 <section id="catalogo"><div class="wrap">
 <div class="section-head"><div><div class="eyebrow">Seleção JvBrandz</div><h2>Encontre o que procura.</h2></div><p>Disponibilidade e valores sob consulta.</p></div>
-<div class="tools"><input id="search" class="search" type="search" placeholder="Buscar produto..." aria-label="Buscar produto"><div class="filters" id="filters">
-<button class="filter active" data-cat="Todos">Todos</button><button class="filter" data-cat="iPhones">iPhones</button><button class="filter" data-cat="Smartphones">Smartphones</button><button class="filter" data-cat="Games">Games</button><button class="filter" data-cat="Tecnologia">Tecnologia</button>
+<div class="tools"><input id="search" class="search" type="search" placeholder="Busque por produto, modelo ou marca" aria-label="Buscar produto"><div class="filters" id="filters">
 </div></div>
+<div class="catalog-toolbar"><p id="resultCount" role="status" aria-live="polite">Carregando catálogo…</p><label for="sort">Ordenar por <select id="sort"><option value="default">Categorias</option><option value="az">Nome: A a Z</option><option value="za">Nome: Z a A</option></select></label></div>
 <div class="grid" id="products"></div>
 </div></section>
 <section class="promise"><div class="wrap promise-grid">
@@ -81,5 +86,11 @@ dialog{width:min(740px,calc(100% - 28px));max-height:90vh;overflow:auto;backgrou
 <p id="copyStatus" role="status" aria-live="polite"> </p>
 </dialog>
 
-<script src="script.js"></script>
+<dialog id="productDialog" aria-labelledby="productTitle">
+<button class="close-dialog" id="closeProduct" aria-label="Fechar detalhes">×</button>
+<div class="detail-layout"><div class="detail-photo"><img id="productPreview" alt=""></div><div><span id="productCategory" class="eyebrow"></span><h2 id="productTitle"></h2><p id="productDescription"></p><p class="stock-note">Preço e disponibilidade sob consulta.</p><label for="productQuantity">Quantidade desejada</label><input id="productQuantity" type="number" min="1" max="99" value="1" inputmode="numeric"></div></div>
+<label for="productSummary">Sua mensagem para o atendimento</label><textarea id="productSummary" readonly rows="3"></textarea>
+<div class="hero-actions"><button id="copyProduct" class="btn">Copiar consulta</button><a class="btn secondary" href="https://www.instagram.com/jvbrandz/" target="_blank" rel="noopener noreferrer">Abrir Instagram ↗</a></div><p id="productStatus" role="status" aria-live="polite"></p>
+</dialog>
+<script src="script.js?v=20261112"></script>
 </body></html>
