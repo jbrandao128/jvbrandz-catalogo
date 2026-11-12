@@ -6,7 +6,7 @@ const grid=document.getElementById('products'),search=document.getElementById('s
 const dialog=document.getElementById('iphoneDialog'),modelSelect=document.getElementById('iphoneModel'),colorSelect=document.getElementById('iphoneColor'),storageSelect=document.getElementById('iphoneStorage'),summary=document.getElementById('iphoneSummary'),status=document.getElementById('copyStatus');
 const productDialog=document.getElementById('productDialog'),quantity=document.getElementById('productQuantity'),configuration=document.getElementById('productConfiguration'),productSummary=document.getElementById('productSummary'),productStatus=document.getElementById('productStatus');
 function render(){
- const words=normalize(search.value.trim()).split(/\s+/).filter(Boolean);
+ const words=normalize(search.value.trim()).match(/com fio|sem fio|\S+/g)||[];
  const filtered=products.filter(p=>{
   const haystack=normalize([p.name,p.cat,p.desc,p.tag,p.generation?iphoneModels.filter(m=>m.generation===p.generation).map(m=>m.name).join(' '):''].join(' '));
   return(category==='Todos'||p.cat===category)&&words.every(w=>haystack.includes(w));
